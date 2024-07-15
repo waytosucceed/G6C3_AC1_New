@@ -1,0 +1,209 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <style>
+
+            #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+              
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 18px;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>        
+            <div>
+            <h2 id="about">ANTONYMS</h2> 
+        </div>
+
+    
+    
+          
+         <div class="maindiv container-fluid" style="height:60%;">
+            <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                <img id="family" src="1.jpg" style="width:100%;"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                <p id="story" style="text-align:left; width:100%;font-size: 22px;">
+              
+                    In the earlier class we learnt <u style="color:brown">SYNONYMS</u>, which are word pairs or word groups with same or
+                    nearly exact meanings. Today we are going to do the opposite! <br><br>
+                    We are going to study word pairs that mean the opposite to each other.
+                    They are called <u style="color:brown"> ANTONYMS</u>.
+ 
+         
+                     
+                </p> 
+            </div>
+        </center>
+        </div>
+        <br>
+        <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+        <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+       
+       
+       
+
+
+        </center>   
+
+        <script>
+
+            var images = ["Assests/1.jpg", "Assests/2.jpg", "Assests/3.jpg", "Assests/4.jpg", "Assests/5.jpg", "Assests/6.jpg", "Assests/7.jpg", "Assests/8.jpg", "Assests/9.jpg", "Assests/10.jpg", "Assests/11.jpg", "Assests/12.jpg","Assests/13.jpg","Assests/14.jpg"];
+            var para=["It is said that there was a shepherd named Magnes, who lived in ancient Greece. He used to take his herd of sheep and goats to the nearby mountains for grazing. He would take a stick with him to control his herd. The stick had a small piece of iron attached at one end.",
+                
+                      "<span style='background-color: brown;color: white;'> PQ. </span> <br> <br> 1) Who is Magnes? <br> <br> Ans.: Magnes was a shepherd who lived in ancient Greece. <br> <br> 2) Where did he take his sheep and goats for grazing? <br> <br> Ans.: Magnes took his sheep and goats to the nearby mountain.",
+
+                      " <span style='background-color: brown;color: white;'>  DISCUSSION:</span> <br> <br> The story tells us that Magnes lived in ancient Greece. Let us consider the adjective  <i style='background-color:aqua;'> “ancient” </i> which is describing Greece of very old times. <br><br> Q. Do you know any word or words that mean the opposite of “ancient”? <br> Ans: <span style='color:blue'>Recent </span> or <span style='color: blue;'> Contemporary </span> <br> We can say that ‘Recent’ and ‘Contemporary’ are antonyms of ‘ancient’.",
+
+
+                      "  The story tells us that the stick with which Magnes controlled his herd of goats and sheep had a <i style='font-weight: bolder;'> small </i> piece of iron attached to it. <br> <br>Let us consider the adjective <span style='background-color:aqua;'> ‘small’ </span> and glace over its antonyms in the table on the left:<br>👈<hr>From studying the above table we understand that: <br> <u style='color:blue;'> Each antonym of a word might or might not be used for the same purpose.</u>",
+
+                      "<img src='5th.jpg'  style='width: 100%;height:360px;'  alt=''>",
+
+
+                      "One day he was <u> surprised </u> to find that he had to pull <u> hard </u> to <u>free</u> his stick from a rock on the mountainside. It seemed as if the stick was being <u> attracted </u> by the rock. The rock was a <u> natural </u> magnet and it attracted the iron tip of the shepherd's stick. It is said that this is how natural magnets were <u> discovered.</u>",
+
+                      " <span style='background-color: brown;color: white;'> PQ: </span> <br><br> 1) Why did Magnes get surprised? <br> Ans.: Magnes was surprised to find that he had to pull hard to free his stick from a rock on the mountainside.<br> <br> 2)Why did it seem that the stick was being attracted by the rock? <br> Ans: It seemed that the stick was being attracted by the rock because the rock was a natural magnet and it attracted the iron tip of the shepherd’s stick.",
+
+                      "<img src='8th.jpg'  style='width: 100%;height:360px;'  alt=''>",
+
+                      "Such rocks were given the name magnetite, perhaps after the name of that shepherd. Magnetite contains iron. Some people <u> believe </u> that magnetite was  <u>first </u> discovered at a place called Magnesia. The substances having the property of attracting iron are now <u> known </u> as magnets. This is how the story goes.",
+
+                      " <span style='background-color: brown;color: white;'>PQ: </span> <br> <br> 1) What name was given to the rocks which could attract iron? <br>  <br>2) Where was magnetite believed to have been discovered first?",
+
+                     
+
+
+
+                    ]
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                   //` document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "10.jpg";
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Example";
+                    document.getElementById("story").innerHTML = "<img src='10th.jpg'  style='width: 100%;height:360px;'  alt=''> ";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="22px"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="How were magnets discovered"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="22px"
+                   // document.getElementById("story").style.backgroundColor="lightblue"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "1.jpg";
+                    document.getElementById("about").innerHTML="ANTONYMS"
+                    document.getElementById("story").innerHTML = ' In the earlier class we learnt <u style="color:brown">SYNONYMS</u>, which are word pairs or word groups with same or nearly exact meanings. Today we are going to do the opposite! We are going to study word pairs that mean the opposite to each other. They are called <u style="color:brown">ANTONYMS.</u>';
+                }
+                else{
+                document.getElementById("about").innerHTML="How were magnets discovered"
+                document.getElementById("story").style.fontSize="22px"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
